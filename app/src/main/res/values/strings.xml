@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AssignmentNew</string>
+    <string name="TopImage">TopImg</string>
+    <string name="WelcomeText">Welcome back </string>
+    <string name="SignLabel">sign in to access your account</string>
+    <string name="EnterEmail">Enter your email</string>
+    <string name="Password"> Password</string>
+    <string name="CheckBox">Remember me</string>
+    </resources>

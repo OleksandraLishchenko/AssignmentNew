@@ -12,8 +12,8 @@
         android:id="@+id/topImage"
         android:layout_width="321dp"
         android:layout_height="251dp"
-        android:layout_marginTop="42dp"
-        android:layout_marginStart="52dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="62dp"
         android:scaleType="fitCenter"
         android:src="@drawable/img"
         android:contentDescription="@string/TopImage"
@@ -22,39 +22,38 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/WelcomeText"
-        android:text="@string/WelcomeText"
-        android:layout_width="189dp"
-        android:layout_height="29dp"
-        android:textSize="24sp"
+        android:id="@+id/GetStartedText"
+        android:text="@string/GetStarted"
+        android:layout_width="210dp"
+        android:layout_height="44dp"
+        android:textSize="36sp"
         android:textColor="@android:color/black"
         app:layout_constraintTop_toBottomOf="@id/topImage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="-120dp"/>
-
+        android:layout_marginTop="-118dp"/>
 
     <TextView
-        android:id="@+id/SignInText"
-        android:text="@string/SignLabel"
-        android:layout_width="207dp"
+        android:id="@+id/ByCreatingText"
+        android:text="@string/ByCreatingLabel"
+        android:layout_width="183dp"
         android:layout_height="17dp"
         android:textSize="14sp"
         android:textColor="@android:color/black"
-        app:layout_constraintTop_toBottomOf="@id/WelcomeText"
+        app:layout_constraintTop_toBottomOf="@id/GetStartedText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="8dp" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/emailInput"
+        android:id="@+id/FullNameInput"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:hint="@string/EnterEmail"
-        android:layout_marginTop="75dp"
+        android:hint="@string/FullName"
+        android:layout_marginTop="70dp"
         app:endIconMode="custom"
-        app:endIconDrawable="@drawable/mail"
-        app:layout_constraintTop_toBottomOf="@id/SignInText"
+        app:endIconDrawable="@drawable/user"
+        app:layout_constraintTop_toBottomOf="@id/GetStartedText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
@@ -64,14 +63,49 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/passwordInput"
+        android:id="@+id/ValidEmailInput"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/Password"
-        android:layout_marginTop="20dp"
+        android:layout_height="50dp"
+        android:hint="@string/ValidEmail"
+        android:layout_marginTop="15dp"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/mail"
+        app:layout_constraintTop_toBottomOf="@id/FullNameInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/PhoneNumberInput"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:hint="@string/PhoneNumber"
+        android:layout_marginTop="15dp"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/smartphone"
+        app:layout_constraintTop_toBottomOf="@id/ValidEmailInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/StrongPasswordInput"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:hint="@string/StrongPassword"
+        android:layout_marginTop="15dp"
         app:endIconMode="custom"
         app:endIconDrawable="@drawable/lock"
-        app:layout_constraintTop_toBottomOf="@id/emailInput"
+        app:layout_constraintTop_toBottomOf="@id/PhoneNumberInput"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
@@ -81,60 +115,49 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <CheckBox
-        android:id="@+id/rememberMeCheckbox"
+        android:id="@+id/AgreeTermsCheckbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/CheckBox"
-        app:layout_constraintTop_toBottomOf="@id/passwordInput"
-        app:layout_constraintStart_toStartOf="@id/passwordInput"
-        android:layout_marginTop="8dp" />
-
-    <TextView
-        android:id="@+id/forgotPasswordText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/ForgetPass"
-        android:textStyle="bold"
-        android:textColor="@android:color/holo_purple"
-        app:layout_constraintTop_toTopOf="@id/rememberMeCheckbox"
-        app:layout_constraintEnd_toEndOf="@id/passwordInput"
-        android:layout_marginTop="10dp"/>
+        android:text="@string/AgreeCheckBox"
+        android:textSize="11sp"
+        app:layout_constraintTop_toBottomOf="@id/StrongPasswordInput"
+        app:layout_constraintStart_toStartOf="@id/StrongPasswordInput"
+        android:layout_marginTop="5dp" />
 
     <Button
-        android:id="@+id/nextButton"
+        android:id="@+id/nextButton2"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:text="@string/ButtonNext"
+        android:text="@string/ButtonNextNew"
         android:backgroundTint="@color/purple_500"
         android:textColor="@android:color/white"
-        app:layout_constraintTop_toBottomOf="@id/rememberMeCheckbox"
+        app:layout_constraintTop_toBottomOf="@id/AgreeTermsCheckbox"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="100dp" />
+        android:layout_marginTop="45dp" />
+
     <TextView
-        android:id="@+id/newMemberText"
+        android:id="@+id/alreadyMemberText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/NewMember"
+        android:text="@string/AlreadyMember"
         android:textColor="@android:color/black"
         android:textSize="13sp"
-        app:layout_constraintTop_toBottomOf="@id/nextButton"
+        app:layout_constraintTop_toBottomOf="@id/nextButton2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/RegisterNowText"
+        app:layout_constraintEnd_toStartOf="@id/alreadyMemberText"
         android:layout_marginTop="16dp"
         android:layout_marginStart="120dp"/>
 
     <TextView
-        android:id="@+id/RegisterNowText"
+        android:id="@+id/LogInText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/RegisterNow"
+        android:text="@string/LogIn"
         android:textColor="@android:color/holo_purple"
         android:textStyle="bold"
         android:textSize="13sp"
-        app:layout_constraintTop_toTopOf="@id/newMemberText"
-        app:layout_constraintStart_toEndOf="@id/newMemberText"/>
-
-
+        app:layout_constraintTop_toTopOf="@id/alreadyMemberText"
+        app:layout_constraintStart_toEndOf="@id/alreadyMemberText"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
